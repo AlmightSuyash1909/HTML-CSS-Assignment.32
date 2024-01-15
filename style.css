@@ -1,0 +1,228 @@
+:root{
+    --primary:rgb(34 41 70);
+    --textDark:rgb(24 27 39);
+    --textLight:rgb(140, 141, 145);
+    --bg:rgb(233 236 252);
+    --secondary:rgb(55 182 103);
+}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Own Styles */
+
+html{
+    font-size: 16px;
+}
+*{
+    box-sizing:border-box;
+}
+body{
+    line-height:1.5;
+    font-size:1rem;
+    font-family: 'Open Sans', sans-serif;
+    color:var(--textLight)
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Source Serif 4', serif;
+}
+.container{
+    max-width:1200px;
+    width:100%;
+    margin:0 auto;
+    padding: 0 2rem;
+}
+.flex{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.justify-center{
+    justify-content: center;
+}
+.center{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-30{
+    flex:0 1 30%
+}
+.flex-48{
+    flex: 0 1 48%;
+}
+.font-0{
+    font-size: 0;
+}
+a{
+    text-decoration: none;
+}
+
+/* button */
+.btn{
+    display: inline-block;
+    background-color:var(--secondary);
+    color:white;
+    padding:0.8rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 0.3rem;
+    font-weight: 500;
+    margin-top: 0.8rem;
+}
+/* HEADER */
+.header{
+    background-color:var(--primary);
+    padding:1rem 0;
+}
+.nav .nav-item {
+    margin-left:1.5rem;
+}
+
+.nav-item a {
+    color:white;
+    font-weight: 500;
+    font-size:1.2rem;
+}
+.nav-item .active{
+    color: var(--secondary);
+}
+.nav-item a:hover{
+    color:var(--secondary)
+}
+
+/* Main */
+/* Hero-Section */
+
+.hero{
+    padding:5rem 0;
+    background-color:var(--bg);
+}
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 0.9rem;
+    color: var(--textDark);
+    font-weight: 700;
+}
+.hero p {
+    margin-bottom: 1rem;
+}
+
+
+/* Blog Section */
+.blog{
+    padding:5rem 0;
+}
+.blog h2 {
+    font-size: 2.3rem;
+    margin-bottom: 0.9rem;
+    color: var(--textDark);
+    font-weight: 700;
+    text-align: center;
+}
+.blog .article {
+    margin-top:2rem;
+}
+.blog img {
+    margin-bottom: 0.9rem;
+}
+.blog h3 {
+    font-size: 1.7rem;
+    margin-bottom: 0.9rem;
+    color: var(--textDark);
+    font-weight: 700;
+}
+.blog .btn{
+    font-size:1rem;
+    padding:0.6rem 2rem;
+}
+.blog .flex-30{
+    margin:1.2%;
+}
+
+/* Footer */
+
+.footer{
+    padding:1.6rem 0;
+    background-color: var(--primary);
+    color:white;
+}
+.footer a {
+    margin-left: 1.6rem;
+    color:white;
+    font-size:1.2rem;
+}
+
+
+@media screen and (max-width:768px) {
+    html{
+        font-size: 10px;
+    }
+    .column{
+        flex-direction: column;
+    }
+    .logo{
+        margin-top: 1rem;
+    }
+    .nav-item{
+        margin: 1.5rem 1rem;
+    }
+    .flex-100{
+        flex:0 1 100%;
+    }
+    .wrap{
+        flex-wrap:wrap;
+    }
+    .order-1{
+        order:1;
+    }
+    .footer a {
+        display: inline-block;
+        margin:1rem 1rem 0 1rem;
+        text-align: center;
+    }
+}
